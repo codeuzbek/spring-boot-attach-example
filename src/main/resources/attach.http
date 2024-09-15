@@ -1,0 +1,32 @@
+### Upload Attach
+POST http://localhost:8080/api/v1/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="mazgi_rasm.jpeg"
+
+< C:\Users\Bobur_Jumaniyazov\Desktop\spring-boot\test-file\mazgi_rasm.jpeg
+
+
+### Upload Attach (Video)
+POST http://localhost:8080/api/v1/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="testvideo.mp4"
+
+< C:\Users\Bobur_Jumaniyazov\Desktop\spring-boot\test-file\testvideo.mp4
+
+
+### Open Attach
+GET http://localhost:8080/api/v1/attach/open/0c1bad2f-feea-49f3-be01-2d4edbb38f40.jpeg
+
+
+### Download Attach
+GET http://localhost:8080/api/v1/attach/download/0c1bad2f-feea-49f3-be01-2d4edbb38f40.jpeg
+
+### Attach List
+GET http://localhost:8080/api/v1/attach?page=1&size=10
+
+### Delete Attach
+DELETE http://localhost:8080/api/v1/attach/34353285-324f-4e7c-a871-63375f329eca.jpeg
